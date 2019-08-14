@@ -2,10 +2,11 @@ package com.cluster.server;
 
 import com.cluster.exception.SignalFailedException;
 
+import java.io.Serializable;
 import java.text.MessageFormat;
 import java.util.Random;
 
-public class Node implements isFaillable {
+public class Node implements isFaillable, Serializable {
 
     private static final Random RANDOM = new Random();
 

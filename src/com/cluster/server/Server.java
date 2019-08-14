@@ -3,6 +3,7 @@ package com.cluster.server;
 import com.cluster.exception.MyOptional;
 import com.cluster.exception.SignalFailedException;
 
+import java.io.Serializable;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-public class Server implements isFaillable {
+public class Server implements isFaillable, Serializable {
 
     private static final Random RANDOM = new Random();
 

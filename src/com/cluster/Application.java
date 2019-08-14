@@ -4,6 +4,9 @@ import com.cluster.exception.SignalFailedException;
 import com.cluster.search.BinaryFailSearchEngine;
 import com.cluster.server.Cluster;
 
+import java.io.File;
+import java.io.IOException;
+
 public class Application {
 
     public static void main(String[] args) throws InterruptedException {
@@ -36,5 +39,10 @@ public class Application {
     private static void transactionSuccessful(Cluster cluster) {
         System.out.println(cluster);
         System.out.println("Transaction has passed successfully!");
+    }
+
+    public static void writeOutput() throws IOException {
+        File file = new File("D:\\Dropbox\\Job\\Java\\my tasks Java\\studyRepo\\src\\com\\cluster\\resources\\data.json");
+       // ObjectMapper objectMapper = new ObjectMapper();
     }
 }
